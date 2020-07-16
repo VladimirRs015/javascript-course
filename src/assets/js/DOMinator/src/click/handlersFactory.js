@@ -3,14 +3,13 @@
  @function function Gets a set of css properties  element and check if one of them matches
  * 
  * @param {array} arraysMatcher Array with the valid css properties that will be matched  with the event element
- * @param {boolean} deepSearchSearch Espefifies the depth of the search   
+ * @param {boolean} deepSearch Espefifies the depth of the search   
  * @return {boolean} verification if the match with one of them
  */
-function arraysMatchingHandler(element,arraysMatcher, deepSearchSearch) {
- console.log(deepSearchSearch)
+function arraysMatchingHandler(element,arraysMatcher, deepSearch) {
   let result = true;
     for (let matcher of arraysMatcher.catchMatch) {
-      if (deepSearchSearch) {
+      if (deepSearch) {
         if (element.target.matches(`${matcher} , ${matcher} *`)) {
           result = true;
         }
@@ -24,9 +23,9 @@ function arraysMatchingHandler(element,arraysMatcher, deepSearchSearch) {
   }
   
   // Also this function gets a matcher property but this is to strings
-  function stringMatchingHandler(element,stringMatcher, deepSearchSearch) {
+  function stringMatchingHandler(element,stringMatcher, deepSearch) {
     let result = false;
-    if (deepSearchSearch) {
+    if (deepSearch) {
       if (element.matches(`${stringMatcher} , ${stringMatcher} *`)) {
         result = true;
       }

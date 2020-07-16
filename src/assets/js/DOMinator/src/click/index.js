@@ -19,7 +19,6 @@ class DOMinator {
       if (!this.matcher && !this.handler) {
         throw new Error("Must be one event matcher");
       }
-  
       const DOMElement = document.querySelector(this.DOMcontext);
       DOMElement.addEventListener(this.event, () => {
         DefaultEventHandler(event, {
@@ -27,7 +26,6 @@ class DOMinator {
           catchMatch: this.catchMatch,
           handler: this.handler,
         });
-        return;
       });
     }
     setHandler(handler) {
