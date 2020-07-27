@@ -5,28 +5,34 @@ export default function(btnValidCSSSelector){
     const sun = "🌞"
     const $theme_chooser = document.querySelector('.theme-chooser-button')
     function themeSetter(func){
-        const themeRepeceptors = document.querySelectorAll('[data-themes-receptor]')
+        const themeRepeceptors = document.querySelectorAll('[data-themes-receptor="true"]')
         themeRepeceptors.forEach(element=>{
-            func(element);
+            func(element)
         })
     }
     function DarkTheme(){
+       
         $theme_chooser.textContent = sun   
         themeSetter((element)=>{
-            element.style.setProperty('color','yellow')
+            element.style.setProperty('color','#f7df1e')
             element.style.setProperty('background-color','#010101');
         });
         
     }
     function LightTheme(){
-        $theme_chooser.textContent = moon   
+        $theme_chooser.textContent = moon 
+        
         themeSetter((element)=>{
+            element.style.setProperty('background','#f0f0f0')
+            // element.style.setProperty('color','#010101');
             element.style.setProperty('color','#010101');
-            element.style.setProperty('background-color','#fff');
+
+
         });
     }
     document.addEventListener('click',()=>{
         if(event.target.matches(`${btnValidCSSSelector} , ${btnValidCSSSelector} *`)){
+            event.target.parentElement.classList.toggle('theme-chooser-is-active')
                 if($theme_chooser.textContent === sun){
                     LightTheme();
                 }   

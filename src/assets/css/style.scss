@@ -1,5 +1,6 @@
-
-$main-color : #f7df1e;
+// @import './style.scss';
+@import './ball-game.scss';
+// $main-color : #f7df1e;
 $second-color : #010101 ;
 $white : #f0f0f0;
 $section-width : 99vw ; 
@@ -95,12 +96,28 @@ a{
     left : 0 ;
     background-color: $second-color;
 }
+.theme-chooser-is-active{
+    left : 0 ;
+    background-color: $white;
+}
 
 .hidden {
     opacity: 0;
     visibility: hidden;
-}
+} 
 section {
     width: $section-width;
     height: $section-heigth;
+}
+
+.popUpTopInfo{
+    position: fixed;
+    top : 0 ; 
+    right : 0; 
+    left:0 ;
+    padding: 5px 0 5px 0 ;
+}
+
+.danger {
+    background-color : #bd444a;
 }

@@ -8,12 +8,23 @@ module.exports = (env, argv) => {
     mode : 'development',
     entry: "./src/index.js",
     output: {
-      filename: `[name].[${isDevelopment ?'hash' : 'contenthash'}].js`,
+      filename: `[name].[${isDevelopment ?'hash' : 'contenthash'}].bundle.js`,
       path: path.resolve(__dirname, "dist"),
     },
     devServer: {
       contentBase: "./dist",
       hot: true,
+    },
+    optimization : {
+      splitChunks :{
+        maxSize : 100000, 
+        cacheGroups:{
+          defaultvendors : {
+            test : /[\\/]node_modules[\\/]/, 
+            priority : -10
+          }
+        }
+      }
     },
     devtool : isDevelopment ? 'eval-cheap-source-map': 'source-map',
     module: {

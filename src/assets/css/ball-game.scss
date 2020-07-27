@@ -1,0 +1,21 @@
+$main-color : #f7df1e;
+$board-width : 80% ;
+$board-heigth : $board-width / 3 ; 
+$board-color :#3b3b3b ;
+$ball-size : 40px;
+.board {
+    width: $board-width;
+    height: $board-heigth;
+    background-color: $board-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto ;
+    margin-right: auto ;
+}
+.ball{
+    width: $ball-size;
+    height: $ball-size;
+    border-radius: 50%;
+    background-color:$main-color ;
+}
