@@ -13,11 +13,11 @@
     </header>
     <nav class="navagation">
         <ul class="list-container">
-            <li class="list-item"><a href="#section1">Alarma sonora</a></li>
-            <li class="list-item"><a href="#section2">seccion 2</a></li>
-            <li class="list-item"><a href="#section3">seccion 3</a></li>
-            <li class="list-item"><a href="#section4">seccion 4</a></li>
-            <li class="list-item"><a href="#section5">seccion 4</a></li>
+            <li class="list-item" data-intersect-menu><a href="#section1">Eventos del teclado</a></li>
+            <li class="list-item" data-intersect-menu><a href="#section2">Responsive Slider</a></li>
+            <li class="list-item" data-intersect-menu><a href="#section3">Webcam</a></li>
+            <li class="list-item" data-intersect-menu><a href="#section4">Video inteligente</a></li>
+            <li class="list-item" data-intersect-menu><a href="#section5">Responsive Responsable Webdesign</a></li>
         </ul>
     </nav>
     <div class="function-buttons hamburger-container">
@@ -40,7 +40,7 @@
         </button>
     </div>
     <main>
-        <section id="section1">
+        <section id="section1" data-intersect-menu>
             <h1>Eventos del teclado</h1>
             <div class="board">
                 <div class="ball">
@@ -48,7 +48,7 @@
                 </div>
             </div>
         </section>
-        <section id="section2">
+        <section id="section2" data-intersect-menu>
             <h1>Responsive Slider</h1>
             <div class="slider">
                 <div class="slides">
@@ -82,13 +82,20 @@
             </div>
 
         </section>
-        <section id="section3">
-            <h1>Seccion 3</h1>
+        <section id="section3" data-intersect-menu>
+            <h1>Webcam</h1>
+            <video id="videoStream"></video>
+            <canvas id="canvasStream">
+
+            </canvas>
         </section>
-        <section id="section4">
-            <h1>Seccion 4</h1>
+        <section id="section4" data-intersect-menu>
+            <h1>Video inteligente</h1>
+            <div class="video-container">
+                <video id="videoSource" autoplay="true" loop="true" controls="true"></video>
+            </div>
         </section>
-        <section id="section5">
+        <section id="section5" data-intersect-menu>
             <h1>Seccion 5</h1>
         </section>
 </body>

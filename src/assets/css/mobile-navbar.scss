@@ -1,0 +1,75 @@
+@import './colors.scss';
+@media screen and (max-width : 768px){
+
+    li{ 
+        filter: opacity(0.8);
+        list-style: none;
+        text-align: center;
+        padding: 2em 0;
+        border-bottom: 0.1px dotted ;
+    }
+    li:first-child{
+        margin-top: 100px;
+    }
+    li:hover {
+        transition: 0.5s ease-in-out;
+        background-color: $main-color;
+    }
+    .menu-active{
+        background: $main-color;
+        color:$second-color;
+    }
+    a{
+        text-decoration: none;
+        color: $second-color;
+        font-size : 1.2em
+    }
+     nav{
+        background-color: $modal-second-color;
+        position: fixed;
+        top :0 ; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index : 998;
+        transform: translate(0,-100%);
+        transition: 0.3s ease-in-out  ;
+    } 
+    .li-menu-is-active{
+        transform: translate(0,0);
+    }
+    li{ 
+        filter: opacity(0.8);
+        list-style: none;
+        text-align: center;
+        padding: 2em 0;
+        border-bottom: 0.1px dotted ;
+    }
+    li:first-child{
+        margin-top: 100px;
+    }
+    li:hover {
+        transition: 0.5s ease-in-out;
+        background-color: $main-color;
+    }
+    
+    a{
+        text-decoration: none;
+        color: $second-color;
+        font-size : 1.2em
+    }
+    nav{
+        background-color: $modal-second-color;
+        position: fixed;
+        top :0 ; 
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index : 998;
+        transform: translate(0,-100%);
+        transition: 0.3s ease-in-out  ;
+    } 
+    .li-menu-is-active{
+        transform: translate(0,0);
+    }
+}

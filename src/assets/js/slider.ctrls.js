@@ -2,10 +2,8 @@ const $slides = document.querySelectorAll('.slides')
 const $slider = document.querySelector('.slider')
 const $btnSlideRight = document.querySelector('.btn-slide-right')
 const $btnSlideLeft = document.querySelector('.btn-slide-left')
-
-console.log($slides)
 let currentSlide = Math.floor(Math.random() * $slides.length-1) + 1; 
-console.log(currentSlide)
+
 $slides[currentSlide].classList.add('is-active')
 
 export default function(){
@@ -25,7 +23,7 @@ export default function(){
             else currentSlide--
             
         }
-        console.log(currentSlide)
+
         $slides[currentSlide].classList.add('is-active')
     })
 

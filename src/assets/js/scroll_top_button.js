@@ -15,5 +15,4 @@ $scrollTopButton.addEventListener('click',()=>{
         top : 10,
         behavior : 'smooth'
     })
-})
-}
+})}

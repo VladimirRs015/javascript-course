@@ -1,0 +1,61 @@
+@import './colors.scss';
+
+//********************Side menu navbar **************************//
+@media screen and(min-width:768px){
+    body{   
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1 auto;
+        grid-template-areas: "header header" "panel main";
+    }
+    main{
+        grid-area: main; 
+        position: relative;
+    }
+    header{
+        grid-area: header;
+        position: relative;
+        padding: 10px 20px;
+        margin: 0 0 0px 0 ;
+    }
+    nav {
+        grid-area: panel;
+        position: fixed;
+    }
+    li{ 
+        filter: opacity(0.8);
+        list-style: none;
+        text-align: center;
+        padding: 2em 0;
+        border-bottom: 0.1px dotted ;
+        &:hover {
+            transition: 0.5s ease-in-out;
+            background-color: $main-color;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: #b1b1b1;
+        font-size : 1.2em
+    }
+    nav{
+        background-color: $third-color;
+        width: 10em;
+        top :66px; 
+        left: 0;
+        right: auto;
+        bottom: 0%;
+        z-index : 998;
+        transform: translate(0,0);
+        transition: 0.3s ease-in-out;
+        overflow-y: scroll;
+    }
+    .menu-active{
+        background: $main-color;
+        color:$second-color;
+    }
+    .hamburger-container{
+        right: 10px;
+        display: none;
+    }
+}
